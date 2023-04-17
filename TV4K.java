@@ -4,42 +4,44 @@
  */
 package da;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
  *
  * @author thaih
  */
-public class TV4K extends Tivi {
-    private ArrayList<Tivi>tv4k;
-    
+public class TV4K extends Tivi {    
     public TV4K(){
         super();
     }
-    public TV4K(ArrayList<Tivi>tv4k,String mativi, String kieumanhinh,String hangsanxuat,double kichthuoctivi,double dongia, int soluong){
-        super (mativi, kieumanhinh, hangsanxuat,kichthuoctivi,dongia, soluong);
-        this.tv4k = tv4k;
+    public TV4K(String mativi, String kieumanhinh,String hangsanxuat,double kichthuoctivi,double dongia, int soluong, String ngaynhap, String ngayxuat, int namphathanh){
+        super (mativi, kieumanhinh, hangsanxuat,ngaynhap, ngayxuat,kichthuoctivi,dongia, soluong, namphathanh);
     }
     @Override
 public void nhap() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Nhập mã Tivi:");
+       System.out.println("Nhập mã Tivi:");
         mativi = scanner.nextLine();
         System.out.println("Nhập kiểu màn hình:");
         kieumanhinh = scanner.nextLine();
         System.out.println("Nhập hãng sản xuất:");
         hangsanxuat = scanner.nextLine();
+        System.out.println("Ngày nhập: ");
+        ngaynhap = scanner.nextLine();
+        System.out.println("Ngày Xuất: ");
+        ngayxuat = scanner.nextLine();
         System.out.println("Nhập kích thước Tivi:");
         kichthuoctivi = scanner.nextDouble();
         System.out.println("Nhập đơn giá:");
         dongia = scanner.nextDouble();
         System.out.println("Nhập số lượng:");
         soluong = scanner.nextInt();
+        System.out.println("Năm Phát Hành: ");
+        namphathanh = scanner.nextInt();
     }
 @Override
        public void xuat(){
-                   System.out.println("{Mã Tivi : "+getMativi()+", Kiểu màn hình: "+getkieumanhinh()+",Hãng sản xuất : "+gethangsanxuat()+" ,Kích thước tivi : "+getkichthuoctivi()+",Đơn giá: "+getdongia()+", Số lượng: "+getsoluong()+"}");
+                 System.out.println("{Mã Tivi : "+getMativi()+", Kiểu màn hình: "+getkieumanhinh()+", Hãng sản xuất : "+gethangsanxuat()+", ngày nhập: "+getngaynhap()+", ngày xuất: "+getngayxuat()+" ,Kích thước tivi : "+getkichthuoctivi()+", Đơn giá: "+getdongia()+", Số lượng: "+getsoluong()+", năm phát hành: "+getnamphathanh()+"}");
 
        }
 }

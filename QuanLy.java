@@ -166,10 +166,10 @@ public void suaTVOLED(String mativi) {
 
 }
     public void hienCacTiviSamsung() {
-for (Tivi x : tv) {
-if (x instanceof Tivi && ((Tivi)
-x).gethangsanxuat().equalsIgnoreCase("Sam sung") == true) {
-x.xuat();
+         for (Tivi x : tv) {
+         if (x instanceof Tivi && ((Tivi)
+         x).gethangsanxuat().equalsIgnoreCase("SAM SUNG") == true) {
+         x.xuat();
 }
 }
 }
